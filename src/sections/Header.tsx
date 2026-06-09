@@ -48,8 +48,10 @@ export function Header() {
         {/* Right actions */}
         <div className="flex items-center gap-3">
           <a
-            href="#"
-            className="flex items-center gap-1.5 text-sm font-medium text-white/60 hover:text-white/90 transition-colors duration-200"
+            href="https://www.instagram.com/repra_jp.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-sm font-medium text-white/60 hover:text-white/90 transition-all duration-200 hover:scale-[1.03] opacity-90 hover:opacity-100"
           >
             <Instagram size={15} strokeWidth={1.8} />
             <span className="hidden sm:inline">Instagram</span>

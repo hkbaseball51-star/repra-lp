@@ -106,14 +106,15 @@ export function CTASection() {
 
         {/* CTA group */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <CTAButton
-            variant="primary"
-            href="#"
-            className="text-base px-9 py-4 shadow-2xl shadow-orange-500/25"
+          <a
+            href="https://www.instagram.com/repra_jp.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 font-semibold rounded-full transition-all duration-200 cursor-pointer select-none text-base px-9 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-2xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-[1.02] hover:from-orange-400 hover:to-amber-400 active:scale-[0.98] opacity-90 hover:opacity-100"
           >
             <Instagram size={16} />
             Instagramで最新情報を見る
-          </CTAButton>
+          </a>
 
           {APP_STORE_URL ? (
             <a

@@ -106,14 +106,15 @@ export function HeroSection() {
 
             {/* CTA group */}
             <div className="flex flex-col sm:flex-row gap-3 mb-5">
-              <CTAButton
-                variant="primary"
-                href="#"
-                className="text-sm px-7 py-3.5"
+              <a
+                href="https://www.instagram.com/repra_jp.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 font-semibold rounded-full transition-all duration-200 cursor-pointer select-none px-7 py-3.5 text-sm bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-[1.02] hover:from-orange-400 hover:to-amber-400 active:scale-[0.98] opacity-90 hover:opacity-100"
               >
                 <Instagram size={14} />
                 Instagramで最新情報を見る
-              </CTAButton>
+              </a>
               <a
                 href="#waitlist"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
