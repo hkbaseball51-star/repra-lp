@@ -44,17 +44,17 @@ function FeatureBlock({ number, title, description, bullets, reversed = false, m
 function WorkoutMockup() {
   return (
     <div
-      className="relative w-full max-w-[480px] mx-auto rounded-[28px] overflow-hidden"
+      className="relative w-full max-w-[500px] mx-auto rounded-[28px] p-3"
       style={{
-        background: '#08080f',
-        border: '1px solid rgba(255,255,255,0.1)',
-        boxShadow: '0 32px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04), 0 0 50px rgba(249,115,22,0.08)',
+        background: '#0c0c16',
+        border: '1px solid rgba(255,255,255,0.09)',
+        boxShadow: '0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03), 0 0 40px rgba(249,115,22,0.07)',
       }}
     >
       <img
         src="/images/repra/feature-record-entry.png"
         alt="REPRA トレーニング記録画面"
-        className="w-full h-auto block"
+        className="w-full h-auto block rounded-[18px]"
         onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
       />
     </div>
@@ -64,17 +64,18 @@ function WorkoutMockup() {
 function GraphMockup() {
   return (
     <div
-      className="relative w-full max-w-[480px] mx-auto rounded-[28px] overflow-hidden"
+      className="relative w-full max-w-[500px] mx-auto rounded-[28px] p-3"
       style={{
-        background: '#08080f',
-        border: '1px solid rgba(255,255,255,0.1)',
-        boxShadow: '0 32px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04), 0 0 50px rgba(249,115,22,0.08)',
+        background: '#0c0c16',
+        border: '1px solid rgba(255,255,255,0.09)',
+        boxShadow: '0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03), 0 0 40px rgba(249,115,22,0.07)',
       }}
     >
       <img
         src="/images/repra/feature-progress-chart.png"
         alt="REPRA 成長グラフ画面"
-        className="w-full h-auto block"
+        className="w-full h-auto block rounded-[18px]"
+        style={{ filter: 'brightness(1.08) contrast(1.05)' }}
         onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
       />
     </div>

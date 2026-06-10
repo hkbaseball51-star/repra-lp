@@ -1,6 +1,5 @@
 import React from 'react';
 import { SectionHeader } from '../components/SectionHeader';
-import { StoryPreviewCard } from '../components/StoryPreviewCard';
 
 export function StoryShareSection() {
   return (
@@ -26,16 +25,33 @@ export function StoryShareSection() {
 
         {/* Story cards */}
         <div className="flex gap-5 overflow-x-auto pb-4 justify-start sm:justify-center snap-x snap-mandatory scrollbar-none">
-          {([
-            { type: 'workout', label: "Today's Workout" },
-            { type: 'maxrm', label: 'Max 1RM' },
-            { type: 'volume', label: 'Progress Graph' },
-          ] as const).map((s, i) => (
+          {[
+            { src: '/images/repra/share-workout-story.jpeg', label: "Today's Workout" },
+            { src: '/images/repra/share-1rm-story.jpeg',     label: 'Max 1RM Progress' },
+            { src: '/images/repra/share-volume-story.jpeg',  label: 'Daily Volume' },
+          ].map((s, i) => (
             <div
               key={i}
               className="snap-center flex-shrink-0 flex flex-col items-center gap-3"
             >
-              <StoryPreviewCard type={s.type} />
+              <div
+                className="rounded-2xl overflow-hidden"
+                style={{
+                  width: '240px',
+                  aspectRatio: '9/16',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  boxShadow: '0 16px 40px rgba(0,0,0,0.45), 0 0 24px rgba(249,115,22,0.07)',
+                  background: '#0a0a10',
+                  flexShrink: 0,
+                }}
+              >
+                <img
+                  src={s.src}
+                  alt={s.label}
+                  className="w-full h-full object-cover block"
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                />
+              </div>
               <span className="text-xs font-semibold text-white/50 tracking-wide">{s.label}</span>
             </div>
           ))}
