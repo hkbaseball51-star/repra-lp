@@ -67,8 +67,36 @@ export function StoryShareSection() {
           ))}
         </div>
 
+        {/* Feature chips */}
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          {[
+            { title: 'Color Themes',    desc: '好きなカラーを選択'    },
+            { title: 'Transparent BG',  desc: '背景透過で保存'        },
+            { title: 'Graph Layouts',   desc: '4種類の画角に対応'     },
+          ].map((chip) => (
+            <div
+              key={chip.title}
+              className="flex items-center gap-2.5 px-4 py-3 rounded-xl"
+              style={{
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                backdropFilter: 'blur(8px)',
+              }}
+            >
+              <div
+                className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                style={{ background: '#F97316', boxShadow: '0 0 5px rgba(249,115,22,0.7)' }}
+              />
+              <div>
+                <p className="text-[12px] font-semibold text-white/80 leading-none mb-0.5">{chip.title}</p>
+                <p className="text-[11px] text-white/35 leading-none">{chip.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* Callout */}
-        <div className="mt-10 text-center">
+        <div className="mt-8 text-center">
           <p className="text-white/30 text-xs font-medium tracking-widest uppercase">
             9:16 · Instagram Story Format · Premium Design
           </p>
