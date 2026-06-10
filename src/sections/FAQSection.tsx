@@ -98,7 +98,7 @@ export function FAQSection() {
         </div>
 
         {/* Accordion */}
-        <div className="space-y-[10px] md:space-y-2.5">
+        <div className="space-y-3 md:space-y-2.5">
           {faqs.map((faq, i) => (
             <FAQItem key={i} q={faq.q} a={faq.a} />
           ))}
