@@ -4,11 +4,6 @@ import { CTAButton } from '../components/CTAButton';
 import { PhoneMockup } from '../components/PhoneMockup';
 import { APP_STORE_URL } from '../config/appStore';
 
-const floatingCards = [
-  { label: 'This Month',  value: '19 Sessions',        top: '8%',     left: '-28%', delay: '0s'   },
-  { label: '部位別に記録', value: 'Push / Pull / Legs', top: '44%',   left: '-36%', delay: '1.5s' },
-  { label: '続けた証拠',  value: '28 Days',             bottom: '15%', left: '-22%', delay: '0.8s' },
-];
 
 export function HeroSection() {
   return (
@@ -82,6 +77,7 @@ export function HeroSection() {
             {/* Japanese headline — primary */}
             <h1 className="text-4xl md:text-5xl font-bold leading-[1.15] tracking-tight mb-2 text-white">
               続けた証拠が、
+              <br />
               <span
                 className="bg-clip-text text-transparent"
                 style={{ backgroundImage: 'linear-gradient(90deg, #F97316, #F59E0B)' }}
@@ -132,41 +128,14 @@ export function HeroSection() {
           </div>
 
           {/* Phone side */}
-          <div className="order-2 flex items-center justify-center lg:justify-end relative lg:-mt-10">
+          <div className="order-2 flex items-center justify-center relative lg:-mt-10">
             <div
               className="pointer-events-none absolute inset-0 scale-110 opacity-50"
               style={{ background: 'radial-gradient(circle at 50% 50%, rgba(249,115,22,0.25) 0%, transparent 60%)' }}
             />
 
-            <div className="relative">
+            <div className="relative lg:scale-[1.08]">
               <PhoneMockup />
-
-              {floatingCards.map((card, i) => (
-                <div
-                  key={i}
-                  className="absolute hidden lg:flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl backdrop-blur-md"
-                  style={{
-                    top: card.top,
-                    right: card.right,
-                    bottom: card.bottom,
-                    left: card.left,
-                    background: 'rgba(12,12,18,0.8)',
-                    border: '1px solid rgba(255,255,255,0.12)',
-                    boxShadow: '0 8px 32px rgba(0,0,0,0.4), 0 0 0 0.5px rgba(249,115,22,0.1)',
-                    animation: `float 6s ease-in-out ${card.delay} infinite`,
-                    whiteSpace: 'nowrap',
-                  }}
-                >
-                  <div
-                    className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                    style={{ background: '#F97316', boxShadow: '0 0 6px rgba(249,115,22,0.8)' }}
-                  />
-                  <div>
-                    <p className="text-[9px] text-white/40 leading-none mb-0.5">{card.label}</p>
-                    <p className="text-xs font-bold text-white leading-none">{card.value}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
 
