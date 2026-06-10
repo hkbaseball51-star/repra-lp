@@ -86,7 +86,7 @@ export function WaitlistSection() {
   }
 
   return (
-    <section id="waitlist" className="relative py-20 overflow-hidden">
+    <section id="waitlist" className="relative py-14 md:py-20 overflow-hidden scroll-mt-24">
       {/* Subtle top separator */}
       <div
         className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[1px]"

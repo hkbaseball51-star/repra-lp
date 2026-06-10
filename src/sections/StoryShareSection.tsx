@@ -3,7 +3,7 @@ import { SectionHeader } from '../components/SectionHeader';
 
 export function StoryShareSection() {
   return (
-    <section id="share" className="relative py-20 overflow-hidden">
+    <section id="share" className="relative py-14 md:py-20 overflow-hidden scroll-mt-24">
       {/* Background glow */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -25,10 +25,9 @@ export function StoryShareSection() {
 
         {/* Story cards
             share-workout-story.jpeg is 711×1794 (taller than 9:16).
-            To show all three images without cropping and at a uniform size,
-            we fix height to 480px and width to 240px, then use object-contain.
-            The workout image gets subtle side bars; 1rm/volume fill perfectly. */}
-        <div className="flex gap-5 overflow-x-auto pb-4 justify-start sm:justify-center snap-x snap-mandatory scrollbar-none">
+            Cards are fixed 480px tall with object-contain.
+            Mobile: vertical stack. sm+: horizontal row with overflow scroll. */}
+        <div className="flex flex-col items-center gap-8 sm:flex-row sm:gap-5 sm:overflow-x-auto sm:pb-4 sm:justify-center sm:snap-x sm:snap-mandatory sm:scrollbar-none">
           {[
             { src: '/images/repra/share-workout-story.jpeg', label: "Today's Workout" },
             { src: '/images/repra/share-1rm-story.jpeg',     label: 'Max 1RM Progress' },
@@ -36,12 +35,11 @@ export function StoryShareSection() {
           ].map((s, i) => (
             <div
               key={i}
-              className="snap-center flex-shrink-0 flex flex-col items-center gap-3"
+              className="snap-center sm:flex-shrink-0 flex flex-col items-center gap-3 w-full sm:w-auto"
             >
               <div
-                className="relative rounded-2xl overflow-hidden flex-shrink-0"
+                className="relative rounded-2xl overflow-hidden w-full max-w-[280px] sm:w-[240px] sm:max-w-none"
                 style={{
-                  width: '240px',
                   height: '480px',
                   background: 'rgba(12, 8, 6, 1)',
                   border: '1px solid rgba(255,255,255,0.08)',
@@ -68,7 +66,7 @@ export function StoryShareSection() {
         </div>
 
         {/* Feature chips */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+        <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
           {[
             { title: 'Color Themes',    desc: '好きなカラーを選択'    },
             { title: 'Transparent BG',  desc: '背景透過で保存'        },
@@ -76,7 +74,7 @@ export function StoryShareSection() {
           ].map((chip) => (
             <div
               key={chip.title}
-              className="flex items-center gap-2.5 px-4 py-3 rounded-xl"
+              className="flex items-center gap-2.5 px-4 py-3 rounded-xl w-full max-w-[300px] sm:w-auto"
               style={{
                 background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.08)',

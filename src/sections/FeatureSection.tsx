@@ -84,7 +84,7 @@ function GraphMockup() {
 
 export function FeatureSection() {
   return (
-    <section id="features" className="relative py-20 overflow-hidden">
+    <section id="features" className="relative py-14 md:py-20 overflow-hidden scroll-mt-24">
       <div
         className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px]"
         style={{ background: 'linear-gradient(90deg, transparent, rgba(249,115,22,0.2), transparent)' }}
@@ -99,7 +99,7 @@ export function FeatureSection() {
             bullets={['種目別記録', 'セット入力', 'Best 1RM', 'Total Volume', 'カレンダー連動']}
             mockup={<WorkoutMockup />}
           />
-          <div id="progress">
+          <div id="progress" className="scroll-mt-24">
           <FeatureBlock
             number="Feature 02"
             title="成長を、グラフで確認。"

@@ -77,7 +77,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export function FAQSection() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section id="faq" className="relative py-16 md:py-24 overflow-hidden scroll-mt-24">
       <div
         className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px]"
         style={{ background: 'linear-gradient(90deg, transparent, rgba(249,115,22,0.2), transparent)' }}
