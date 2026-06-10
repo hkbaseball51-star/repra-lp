@@ -42,7 +42,7 @@ const capabilities = [
 
 export function CapabilitySection() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 md:py-24 overflow-hidden">
       <div
         className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px]"
         style={{ background: 'linear-gradient(90deg, transparent, rgba(249,115,22,0.2), transparent)' }}
@@ -54,7 +54,7 @@ export function CapabilitySection() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-8 md:mb-14">
           <span className="inline-block text-[10px] font-bold tracking-[0.2em] text-orange-500/60 uppercase mb-4">
             Features
           </span>
@@ -67,13 +67,13 @@ export function CapabilitySection() {
         </div>
 
         {/* Card grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
           {capabilities.map((cap, i) => {
             const Icon = cap.icon;
             return (
               <div
                 key={i}
-                className="group relative rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 cursor-default overflow-hidden"
+                className="group relative rounded-2xl p-4 md:p-5 transition-all duration-300 hover:-translate-y-1 cursor-default overflow-hidden"
                 style={{
                   background: 'rgba(255,255,255,0.03)',
                   border: '1px solid rgba(255,255,255,0.08)',
@@ -91,7 +91,7 @@ export function CapabilitySection() {
                 <div className="relative z-10">
                   {/* Icon */}
                   <div
-                    className="w-9 h-9 rounded-xl flex items-center justify-center mb-4"
+                    className="w-8 h-8 md:w-9 md:h-9 rounded-xl flex items-center justify-center mb-3 md:mb-4"
                     style={{
                       background: 'rgba(249,115,22,0.1)',
                       border: '1px solid rgba(249,115,22,0.25)',

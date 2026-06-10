@@ -12,7 +12,7 @@ interface FeatureBlockProps {
 
 function FeatureBlock({ number, title, description, bullets, reversed = false, mockup }: FeatureBlockProps) {
   return (
-    <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center`}>
+    <div className={`grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-14 items-center`}>
       {/* Text */}
       <div className={`${reversed ? 'lg:order-2' : 'lg:order-1'}`}>
         <span className="text-[10px] font-bold tracking-widest text-orange-500/60 uppercase mb-3 block">{number}</span>
@@ -44,7 +44,7 @@ function FeatureBlock({ number, title, description, bullets, reversed = false, m
 function WorkoutMockup() {
   return (
     <div
-      className="relative w-full max-w-[500px] mx-auto rounded-[28px] p-3"
+      className="relative w-full max-w-[340px] sm:max-w-[500px] mx-auto rounded-[28px] p-3"
       style={{
         background: '#0c0c16',
         border: '1px solid rgba(255,255,255,0.09)',
@@ -64,7 +64,7 @@ function WorkoutMockup() {
 function GraphMockup() {
   return (
     <div
-      className="relative w-full max-w-[500px] mx-auto rounded-[28px] p-3"
+      className="relative w-full max-w-[340px] sm:max-w-[500px] mx-auto rounded-[28px] p-3"
       style={{
         background: '#0c0c16',
         border: '1px solid rgba(255,255,255,0.09)',
@@ -84,14 +84,14 @@ function GraphMockup() {
 
 export function FeatureSection() {
   return (
-    <section id="features" className="relative py-14 md:py-20 overflow-hidden scroll-mt-24">
+    <section id="features" className="relative py-10 md:py-20 overflow-hidden scroll-mt-24">
       <div
         className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px]"
         style={{ background: 'linear-gradient(90deg, transparent, rgba(249,115,22,0.2), transparent)' }}
       />
 
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="space-y-20 lg:space-y-24">
+        <div className="space-y-12 lg:space-y-24">
           <FeatureBlock
             number="Feature 01"
             title="今日のトレーニングを、すばやく記録。"

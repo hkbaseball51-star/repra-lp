@@ -50,7 +50,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         }}
       >
         {/* Question row */}
-        <div className="flex items-center justify-between gap-4 px-5 py-3 md:py-4">
+        <div className="flex items-center justify-between gap-4 px-5 py-[14px] md:py-4">
           <span className="font-semibold text-white/90 text-sm leading-snug pr-2">{q}</span>
           <div
             className="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center transition-all duration-300"
@@ -77,7 +77,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export function FAQSection() {
   return (
-    <section id="faq" className="relative py-16 md:py-24 overflow-hidden scroll-mt-24">
+    <section id="faq" className="relative py-10 md:py-24 overflow-hidden scroll-mt-24">
       <div
         className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px]"
         style={{ background: 'linear-gradient(90deg, transparent, rgba(249,115,22,0.2), transparent)' }}
@@ -85,7 +85,7 @@ export function FAQSection() {
 
       <div className="relative z-10 max-w-2xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-8 md:mb-12">
+        <div className="text-center mb-6 md:mb-12">
           <span className="inline-block text-[10px] font-bold tracking-[0.2em] text-orange-500/60 uppercase mb-4">
             FAQ
           </span>
@@ -98,7 +98,7 @@ export function FAQSection() {
         </div>
 
         {/* Accordion */}
-        <div className="space-y-2 md:space-y-2.5">
+        <div className="space-y-[10px] md:space-y-2.5">
           {faqs.map((faq, i) => (
             <FAQItem key={i} q={faq.q} a={faq.a} />
           ))}

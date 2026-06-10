@@ -30,7 +30,7 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 md:py-24 overflow-hidden">
       <div
         className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px]"
         style={{ background: 'linear-gradient(90deg, transparent, rgba(249,115,22,0.2), transparent)' }}
@@ -38,7 +38,7 @@ export function HowItWorksSection() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-8 md:mb-14">
           <span className="inline-block text-[10px] font-bold tracking-[0.2em] text-orange-500/60 uppercase mb-4">
             How it works
           </span>
@@ -53,13 +53,13 @@ export function HowItWorksSection() {
         </div>
 
         {/* Steps grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {steps.map((step, i) => {
             const Icon = step.icon;
             return (
               <div
                 key={i}
-                className="group relative rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 cursor-default overflow-hidden"
+                className="group relative rounded-2xl p-4 md:p-6 transition-all duration-300 hover:-translate-y-1 cursor-default overflow-hidden"
                 style={{
                   background: 'rgba(255,255,255,0.03)',
                   border: '1px solid rgba(255,255,255,0.08)',
@@ -84,13 +84,13 @@ export function HowItWorksSection() {
 
                 <div className="relative z-10">
                   {/* Step number */}
-                  <span className="text-[10px] font-bold tracking-widest text-orange-500/40 uppercase mb-3 block">
+                  <span className="text-[10px] font-bold tracking-widest text-orange-500/40 uppercase mb-2 md:mb-3 block">
                     {step.number}
                   </span>
 
                   {/* Icon */}
                   <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
+                    className="w-9 h-9 md:w-10 md:h-10 rounded-xl flex items-center justify-center mb-3 md:mb-4"
                     style={{
                       background: 'rgba(249,115,22,0.1)',
                       border: '1px solid rgba(249,115,22,0.25)',
