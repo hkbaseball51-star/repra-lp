@@ -22,7 +22,7 @@ export function Footer() {
           {/* Links */}
           <div className="flex items-center gap-6 flex-wrap justify-center">
             <a
-              href="https://www.instagram.com/repra_jp.app/"
+              href="https://www.instagram.com/repra_jp/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-sm text-white/35 hover:text-white/70 transition-all duration-200 hover:scale-[1.03] opacity-90 hover:opacity-100"

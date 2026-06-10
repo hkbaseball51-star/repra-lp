@@ -102,7 +102,7 @@ export function CTASection() {
         {/* CTA group */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://www.instagram.com/repra_jp.app/"
+            href="https://www.instagram.com/repra_jp/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 font-semibold rounded-full transition-all duration-200 cursor-pointer select-none text-base px-9 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-2xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-[1.02] hover:from-orange-400 hover:to-amber-400 active:scale-[0.98] opacity-90 hover:opacity-100"

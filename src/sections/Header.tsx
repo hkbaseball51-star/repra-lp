@@ -49,7 +49,7 @@ export function Header() {
         {/* Right actions */}
         <div className="flex items-center gap-3">
           <a
-            href="https://www.instagram.com/repra_jp.app/"
+            href="https://www.instagram.com/repra_jp/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-sm font-medium text-white/60 hover:text-white/90 transition-all duration-200 hover:scale-[1.03] opacity-90 hover:opacity-100"
@@ -57,16 +57,18 @@ export function Header() {
             <Instagram size={15} strokeWidth={1.8} />
             <span className="hidden sm:inline">Instagram</span>
           </a>
-          <span
-            className="text-[11px] font-bold px-3.5 py-1.5 rounded-full tracking-wide select-none"
+          <a
+            href="#waitlist"
+            className="text-[11px] font-bold px-3.5 py-1.5 rounded-full tracking-wide select-none transition-opacity duration-200 hover:opacity-80"
             style={{
               background: 'linear-gradient(90deg, rgba(249,115,22,0.2), rgba(245,158,11,0.15))',
               border: '1px solid rgba(249,115,22,0.35)',
               color: '#F97316',
+              cursor: 'pointer',
             }}
           >
             Early Access
-          </span>
+          </a>
         </div>
       </div>
     </header>
