@@ -101,19 +101,6 @@ function WorkoutMockup() {
         </div>
       </div>
 
-      {/* TODO: Replace with final REPRA screenshot before production release.
-          Path: /public/images/repra/feature-record.webp (WebP, smartphone vertical ratio)
-          When the file exists it automatically replaces this CSS mockup. */}
-      <img
-        src="/images/repra/feature-record.webp"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover rounded-3xl"
-        style={{ opacity: 0, transition: 'opacity 0.4s', zIndex: 10 }}
-        onLoad={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '1'; }}
-        onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-        loading="lazy"
-      />
     </div>
   );
 }
@@ -183,19 +170,6 @@ function GraphMockup() {
         </div>
       </div>
 
-      {/* TODO: Replace with final REPRA screenshot before production release.
-          Path: /public/images/repra/feature-progress.webp (WebP, smartphone vertical ratio)
-          When the file exists it automatically replaces this CSS mockup. */}
-      <img
-        src="/images/repra/feature-progress.webp"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover rounded-3xl"
-        style={{ opacity: 0, transition: 'opacity 0.4s', zIndex: 10 }}
-        onLoad={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '1'; }}
-        onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-        loading="lazy"
-      />
     </div>
   );
 }

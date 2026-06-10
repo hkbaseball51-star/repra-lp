@@ -1,9 +1,5 @@
 import React from 'react';
 
-// TODO: Replace this with the final REPRA app screen screenshot before production release.
-// Drop the file at: /public/images/repra/hero-phone-screen.webp (WebP, ~9:16 ratio, 1080×1920px recommended)
-const HERO_PHONE_SCREEN_IMAGE = '/images/repra/hero-phone-screen.webp';
-
 export function PhoneMockup() {
   return (
     <div className="relative mx-auto" style={{ width: '260px', height: '528px' }}>
@@ -111,20 +107,6 @@ export function PhoneMockup() {
             </div>
           </div>
 
-          {/* Real screenshot overlay — fades in automatically when HERO_PHONE_SCREEN_IMAGE exists.
-              CSS mockup above acts as fallback and is hidden once the image loads. */}
-          <img
-            src={HERO_PHONE_SCREEN_IMAGE}
-            alt=""
-            aria-hidden="true"
-            width={256}
-            height={524}
-            loading="eager"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ opacity: 0, transition: 'opacity 0.4s', zIndex: 20 }}
-            onLoad={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '1'; }}
-            onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-          />
         </div>
       </div>
 

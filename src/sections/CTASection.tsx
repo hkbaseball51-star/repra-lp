@@ -42,22 +42,7 @@ export function CTASection() {
                 boxShadow: '0 0 0 4px rgba(249,115,22,0.07), 0 0 32px rgba(249,115,22,0.25), inset 0 1px 0 rgba(255,255,255,0.07)',
               }}
             >
-              {/* CSS fallback lettermark */}
               <span className="text-3xl md:text-4xl font-black text-orange-400 select-none">R</span>
-
-              {/* TODO: Replace with the final official REPRA app icon if updated before release.
-                  Path: /public/images/repra/app-icon.png
-                  Recommended size: 1024×1024px PNG */}
-              <img
-                src="/images/repra/app-icon.png"
-                alt="REPRA app icon"
-                width={100}
-                height={100}
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{ opacity: 0, transition: 'opacity 0.4s' }}
-                onLoad={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '1'; }}
-                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-              />
             </div>
 
             {/* App info */}

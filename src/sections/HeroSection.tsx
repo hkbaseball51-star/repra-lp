@@ -47,16 +47,6 @@ export function HeroSection() {
                 }}
               >
                 <span className="text-lg font-black text-orange-400 select-none">R</span>
-                <img
-                  src="/images/repra/app-icon.png"
-                  alt="REPRA"
-                  width={56}
-                  height={56}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  style={{ opacity: 0, transition: 'opacity 0.4s' }}
-                  onLoad={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '1'; }}
-                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-                />
               </div>
 
               <div className="pr-1">

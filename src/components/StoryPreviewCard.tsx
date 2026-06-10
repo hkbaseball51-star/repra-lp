@@ -19,9 +19,6 @@ export function StoryPreviewCard({ type }: StoryPreviewCardProps) {
       footer: 'Streak 28 days',
       accentColor: 'from-orange-600/20 to-amber-600/10',
       borderColor: 'rgba(249,115,22,0.25)',
-      // TODO: Replace with final REPRA screenshot before production release.
-      // Path: /public/images/repra/story-workout.webp (WebP, 9:16 ratio)
-      imageSrc: '/images/repra/story-workout.webp',
     },
     maxrm: {
       label: 'MAX 1RM',
@@ -34,9 +31,6 @@ export function StoryPreviewCard({ type }: StoryPreviewCardProps) {
       footer: 'New personal record',
       accentColor: 'from-amber-600/20 to-orange-700/10',
       borderColor: 'rgba(245,158,11,0.25)',
-      // TODO: Replace with final REPRA screenshot before production release.
-      // Path: /public/images/repra/story-progress.webp (WebP, 9:16 ratio)
-      imageSrc: '/images/repra/story-progress.webp',
     },
     volume: {
       label: 'PROGRESS GRAPH',
@@ -49,9 +43,6 @@ export function StoryPreviewCard({ type }: StoryPreviewCardProps) {
       footer: 'Tracked with REPRA',
       accentColor: 'from-orange-700/20 to-amber-800/10',
       borderColor: 'rgba(249,115,22,0.2)',
-      // TODO: Replace with final REPRA screenshot before production release.
-      // Path: /public/images/repra/story-volume.webp (WebP, 9:16 ratio)
-      imageSrc: '/images/repra/story-volume.webp',
     },
   };
 
@@ -166,17 +157,6 @@ export function StoryPreviewCard({ type }: StoryPreviewCardProps) {
         </div>
       </div>
 
-      {/* Image overlay — replaces CSS mockup when screenshot is available */}
-      <img
-        src={c.imageSrc}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover rounded-2xl"
-        style={{ opacity: 0, transition: 'opacity 0.4s', zIndex: 20 }}
-        onLoad={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '1'; }}
-        onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-        loading="lazy"
-      />
     </div>
   );
 }
