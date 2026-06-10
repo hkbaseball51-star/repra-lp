@@ -5,10 +5,9 @@ import { PhoneMockup } from '../components/PhoneMockup';
 import { APP_STORE_URL } from '../config/appStore';
 
 const floatingCards = [
-  { label: 'This Month',  value: '19 Sessions',      top: '6%',    right: '-12%', delay: '0s'   },
-  { label: '部位別に記録', value: 'Push・Pull・Legs', top: '38%',   right: '-16%', delay: '1.5s' },
-  { label: '続けた証拠',   value: '28 Days',          bottom: '18%', right: '-12%', delay: '0.8s' },
-  { label: '成長も見える', value: '+12.5 kg',         bottom: '8%',  left: '-10%',  delay: '2s'   },
+  { label: 'This Month',  value: '19 Sessions',        top: '8%',     left: '-28%', delay: '0s'   },
+  { label: '部位別に記録', value: 'Push / Pull / Legs', top: '44%',   left: '-36%', delay: '1.5s' },
+  { label: '続けた証拠',  value: '28 Days',             bottom: '15%', left: '-22%', delay: '0.8s' },
 ];
 
 export function HeroSection() {
@@ -82,8 +81,7 @@ export function HeroSection() {
 
             {/* Japanese headline — primary */}
             <h1 className="text-4xl md:text-5xl font-bold leading-[1.15] tracking-tight mb-2 text-white">
-              続けた証拠が
-              <br />
+              続けた証拠が、
               <span
                 className="bg-clip-text text-transparent"
                 style={{ backgroundImage: 'linear-gradient(90deg, #F97316, #F59E0B)' }}
@@ -99,7 +97,7 @@ export function HeroSection() {
 
             {/* Description */}
             <p className="text-white/55 text-sm leading-relaxed mb-8 max-w-md">
-              筋トレの記録をカレンダー・数字・グラフで残し、続けた日々と成長を見返せるアプリです。
+              筋トレの記録をカレンダー・数字・グラフで残し、続けた日々と成長をいつでも見返せるアプリです。
             </p>
 
             {/* CTA group */}
