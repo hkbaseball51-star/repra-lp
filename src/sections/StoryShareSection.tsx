@@ -23,7 +23,11 @@ export function StoryShareSection() {
           />
         </div>
 
-        {/* Story cards */}
+        {/* Story cards
+            share-workout-story.jpeg is 711×1794 (taller than 9:16).
+            To show all three images without cropping and at a uniform size,
+            we fix height to 480px and width to 240px, then use object-contain.
+            The workout image gets subtle side bars; 1rm/volume fill perfectly. */}
         <div className="flex gap-5 overflow-x-auto pb-4 justify-start sm:justify-center snap-x snap-mandatory scrollbar-none">
           {[
             { src: '/images/repra/share-workout-story.jpeg', label: "Today's Workout" },
@@ -35,20 +39,26 @@ export function StoryShareSection() {
               className="snap-center flex-shrink-0 flex flex-col items-center gap-3"
             >
               <div
-                className="rounded-2xl overflow-hidden"
+                className="relative rounded-2xl overflow-hidden flex-shrink-0"
                 style={{
                   width: '240px',
-                  aspectRatio: '9/16',
+                  height: '480px',
+                  background: 'rgba(12, 8, 6, 1)',
                   border: '1px solid rgba(255,255,255,0.08)',
                   boxShadow: '0 16px 40px rgba(0,0,0,0.45), 0 0 24px rgba(249,115,22,0.07)',
-                  background: '#0a0a10',
-                  flexShrink: 0,
                 }}
               >
                 <img
                   src={s.src}
                   alt={s.label}
-                  className="w-full h-full object-cover block"
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    display: 'block',
+                  }}
                   onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                 />
               </div>
