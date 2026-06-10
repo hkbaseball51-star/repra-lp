@@ -33,7 +33,8 @@ export function Header() {
           {[
             { label: 'Features', href: '#features' },
             { label: 'Progress', href: '#progress' },
-            { label: 'Share', href: '#share' },
+            { label: 'Share',    href: '#share'    },
+            { label: 'FAQ',      href: '#faq'      },
           ].map((item) => (
             <a
               key={item.label}
