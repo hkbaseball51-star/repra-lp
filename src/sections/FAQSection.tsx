@@ -39,7 +39,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
     <button
       type="button"
       onClick={() => setOpen((v) => !v)}
-      className="w-full text-left group"
+      className="block w-full text-left group appearance-none"
       aria-expanded={open}
     >
       <div
@@ -50,7 +50,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         }}
       >
         {/* Question row */}
-        <div className="flex items-center justify-between gap-4 px-5 py-[14px] md:py-4">
+        <div className="flex items-center justify-between gap-4 px-5 py-4">
           <span className="font-semibold text-white/90 text-sm leading-snug pr-2">{q}</span>
           <div
             className="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center transition-all duration-300"
@@ -98,7 +98,7 @@ export function FAQSection() {
         </div>
 
         {/* Accordion */}
-        <div className="space-y-3 md:space-y-2.5">
+        <div className="flex flex-col gap-2.5">
           {faqs.map((faq, i) => (
             <FAQItem key={i} q={faq.q} a={faq.a} />
           ))}
