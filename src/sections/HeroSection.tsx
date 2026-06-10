@@ -4,6 +4,11 @@ import { CTAButton } from '../components/CTAButton';
 import { PhoneMockup } from '../components/PhoneMockup';
 import { APP_STORE_URL } from '../config/appStore';
 
+const featureCards = [
+  { title: 'Calendar Log',   sub: '続けた日が見える'  },
+  { title: 'Split Tracking', sub: '部位別に記録'      },
+  { title: 'Progress Proof', sub: '成長を証拠に残す'  },
+];
 
 export function HeroSection() {
   return (
@@ -134,8 +139,35 @@ export function HeroSection() {
               style={{ background: 'radial-gradient(circle at 50% 50%, rgba(249,115,22,0.25) 0%, transparent 60%)' }}
             />
 
-            <div className="relative lg:scale-[1.08]">
-              <PhoneMockup />
+            <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-center gap-6 lg:gap-4">
+              {/* Phone mockup */}
+              <div className="flex-shrink-0 lg:scale-[1.08]">
+                <PhoneMockup />
+              </div>
+
+              {/* Feature cards — right of phone on lg+, below on mobile */}
+              <div className="flex flex-col gap-3 w-full max-w-[260px] lg:max-w-none">
+                {featureCards.map((card, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-2.5 px-3.5 py-3 rounded-xl"
+                    style={{
+                      background: 'rgba(255,255,255,0.03)',
+                      border: '1px solid rgba(255,255,255,0.08)',
+                      backdropFilter: 'blur(12px)',
+                    }}
+                  >
+                    <div
+                      className="w-1.5 h-1.5 rounded-full mt-[3px] flex-shrink-0"
+                      style={{ background: '#F97316', boxShadow: '0 0 6px rgba(249,115,22,0.7)' }}
+                    />
+                    <div>
+                      <p className="text-white/85 text-xs font-semibold leading-snug">{card.title}</p>
+                      <p className="text-white/40 text-[10px] leading-relaxed mt-0.5">{card.sub}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
