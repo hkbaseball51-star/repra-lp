@@ -1,5 +1,5 @@
 import React from 'react';
-import { Copy, Layers, History, TrendingUp, Tag, ImageIcon } from 'lucide-react';
+import { Copy, Layers, History, TrendingUp, CalendarDays, ImageIcon } from 'lucide-react';
 
 const capabilities = [
   {
@@ -10,9 +10,9 @@ const capabilities = [
   },
   {
     icon: Layers,
-    title: '部位別に前回メニューを呼び出し',
+    title: '前回メニューを部位別に呼び出し',
     sub: 'Filter by muscle group',
-    description: '胸・背中・脚など部位ごとに、前回使ったメニューを素早く選択。',
+    description: '胸・背中・脚など、鍛える部位ごとに前回のメニューをすぐに呼び出せます。',
   },
   {
     icon: History,
@@ -27,16 +27,16 @@ const capabilities = [
     description: '3つの指標を折れ線・棒グラフで可視化。継続の成果を数字で確認。',
   },
   {
-    icon: Tag,
-    title: 'セットタイプを区別して記録',
-    sub: 'Warmup / Assisted / Failed',
-    description: 'ウォームアップ・補助あり・失敗セットをタグで区別。正確なデータを残す。',
+    icon: CalendarDays,
+    title: 'カレンダーで振り返り',
+    sub: 'Calendar review',
+    description: 'いつ、どの部位を鍛えたかをカレンダーで確認。継続の流れを見失いません。',
   },
   {
     icon: ImageIcon,
-    title: 'Instagram Story用画像を作成',
+    title: 'そのままストーリーで共有',
     sub: '9:16 share image',
-    description: '成長グラフや今日のセッションを、そのままStoryに貼れる画像で出力。',
+    description: '成長グラフや今日のワークアウトを、Instagram Storyに合う9:16画像で共有できます。',
   },
 ];
 

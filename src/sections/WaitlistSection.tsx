@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 
 type Status = 'idle' | 'submitting' | 'success' | 'duplicate' | 'error';
@@ -12,10 +12,29 @@ interface InsertError {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const benefits = [
+  'App Store公開時に最速で通知',
+  '初期ユーザー限定特典予定',
+  '開発状況を先行公開',
+];
+
 export function WaitlistSection() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<Status>('idle');
   const [debugError, setDebugError] = useState<InsertError | null>(null);
+  const [subscriberCount, setSubscriberCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    async function fetchCount() {
+      const { count } = await supabase
+        .from('waitlist_subscribers')
+        .select('*', { count: 'exact', head: true });
+      if (count && count > 0) {
+        setSubscriberCount(count);
+      }
+    }
+    fetchCount();
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -83,11 +102,35 @@ export function WaitlistSection() {
       <div className="relative z-10 max-w-xl mx-auto px-6 lg:px-8 text-center">
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight">
-          リリース通知を受け取る
+          先行アクセスに登録する
         </h2>
-        <p className="text-white/50 text-sm leading-relaxed mb-8 max-w-sm mx-auto">
-          REPRAの公開情報、アップデート、先行案内をメールで受け取れます。
+        <p className="text-white/50 text-sm leading-relaxed mb-5 max-w-sm mx-auto">
+          リリース前に登録して、App Store公開情報や初期ユーザー向けの案内を最速で受け取りましょう。
         </p>
+
+        {/* Social proof — shown only when count > 0 */}
+        {subscriberCount !== null && (
+          <p className="text-orange-400/75 text-xs font-semibold mb-5 tracking-wide">
+            {subscriberCount} people already joined
+          </p>
+        )}
+
+        {/* Benefits */}
+        <div className="flex flex-col gap-2 mb-7 text-left max-w-xs mx-auto">
+          {benefits.map((b, i) => (
+            <div key={i} className="flex items-center gap-2.5">
+              <div
+                className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0"
+                style={{ background: 'rgba(249,115,22,0.12)', border: '1px solid rgba(249,115,22,0.3)' }}
+              >
+                <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#F97316" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <span className="text-white/65 text-xs font-medium">{b}</span>
+            </div>
+          ))}
+        </div>
 
         {/* Form card */}
         <div
@@ -145,7 +188,7 @@ export function WaitlistSection() {
                     boxShadow: '0 4px 20px rgba(249,115,22,0.35)',
                   }}
                 >
-                  {status === 'submitting' ? '送信中...' : '通知を受け取る'}
+                  {status === 'submitting' ? '送信中...' : '先行アクセスに登録'}
                 </button>
               </div>
 

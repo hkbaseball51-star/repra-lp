@@ -19,7 +19,7 @@ export function StoryShareSection() {
         <div className="text-center mb-12">
           <SectionHeader
             label="Share"
-            title="努力を、見せたくなる形に。"
+            title="努力を、証拠として残す。"
             subtitle="REPRAは、トレーニング記録や成長グラフをInstagram Storyに合う9:16デザインでシェアできます。"
           />
         </div>

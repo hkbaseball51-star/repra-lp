@@ -19,8 +19,8 @@ const problems = [
     sub: 'Notes scattered, hard to review',
   },
   {
-    text: 'ウォームアップや補助ありセットを区別できない',
-    sub: "Can't distinguish set types",
+    text: '前回のメニューが見つからない',
+    sub: "Can't find last session's menu",
   },
 ];
 

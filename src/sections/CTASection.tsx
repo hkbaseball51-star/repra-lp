@@ -43,6 +43,16 @@ export function CTASection() {
               }}
             >
               <span className="text-3xl md:text-4xl font-black text-orange-400 select-none">R</span>
+              <img
+                src="/images/repra/app-icon.png"
+                alt="REPRA App Icon"
+                width={100}
+                height={100}
+                className="absolute inset-0 w-full h-full object-contain"
+                style={{ opacity: 0, transition: 'opacity 0.4s', zIndex: 10 }}
+                onLoad={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '1'; }}
+                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+              />
             </div>
 
             {/* App info */}
@@ -82,7 +92,7 @@ export function CTASection() {
         </h2>
 
         <p className="text-orange-400/80 text-sm font-bold tracking-[0.15em] uppercase mb-4">
-          REPRA — Coming Soon
+          REPRA — Early Access
         </p>
 
         <p className="text-white/65 text-base leading-relaxed mb-10 max-w-md mx-auto">

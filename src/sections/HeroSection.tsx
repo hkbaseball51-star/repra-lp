@@ -47,6 +47,16 @@ export function HeroSection() {
                 }}
               >
                 <span className="text-lg font-black text-orange-400 select-none">R</span>
+                <img
+                  src="/images/repra/app-icon.png"
+                  alt="REPRA App Icon"
+                  width={56}
+                  height={56}
+                  className="absolute inset-0 w-full h-full object-contain"
+                  style={{ opacity: 0, transition: 'opacity 0.4s', zIndex: 10 }}
+                  onLoad={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '1'; }}
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                />
               </div>
 
               <div className="pr-1">
@@ -89,9 +99,8 @@ export function HeroSection() {
 
             {/* Description */}
             <p className="text-white/55 text-sm leading-relaxed mb-8 max-w-md">
-              REPRAは、重量・回数・セットをすばやく記録し、
-              前回メニュー・種目履歴・成長グラフを見返せる
-              筋トレ記録アプリです。
+              前回の重量を忘れない。<br />
+              記録する。見返す。成長が見える。
             </p>
 
             {/* CTA group */}
@@ -115,7 +124,7 @@ export function HeroSection() {
                 }}
               >
                 <Bell size={14} />
-                リリース通知を受け取る
+                先行アクセスに登録
               </a>
             </div>
 

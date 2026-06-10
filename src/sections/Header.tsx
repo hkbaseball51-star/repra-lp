@@ -64,7 +64,7 @@ export function Header() {
               color: '#F97316',
             }}
           >
-            Coming Soon
+            Early Access
           </span>
         </div>
       </div>
