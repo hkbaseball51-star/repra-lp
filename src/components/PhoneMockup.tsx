@@ -25,12 +25,32 @@ export function PhoneMockup() {
         {/* Screen content */}
         <div className="absolute inset-[2px] rounded-[42px] overflow-hidden bg-[#0a0a0f]">
 
-          {/* Status bar */}
-          <div className="flex items-center justify-between px-6 pt-3 pb-1">
-            <span className="text-[10px] text-white/60 font-medium">9:41</span>
+          {/* Status bar — time left, battery right, Dynamic Island floats center above */}
+          <div className="flex items-center justify-between px-5 pt-[14px] pb-1">
+            <span className="text-[10px] text-white/55 font-medium tracking-tight">9:41</span>
             <div className="flex gap-1 items-center">
-              <div className="w-3 h-1.5 rounded-sm bg-white/60"></div>
-              <div className="w-1 h-1.5 rounded-[1px] bg-white/20"></div>
+              {/* Signal bars */}
+              <div className="flex gap-[2px] items-end h-[10px]">
+                <div className="w-[2px] h-[5px] rounded-[1px] bg-white/45"></div>
+                <div className="w-[2px] h-[7px] rounded-[1px] bg-white/45"></div>
+                <div className="w-[2px] h-[9px] rounded-[1px] bg-white/45"></div>
+              </div>
+              {/* Wi-Fi */}
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" className="opacity-45">
+                <path d="M5 7C5.55228 7 6 6.55228 6 6C6 5.44772 5.55228 5 5 5C4.44772 5 4 5.44772 4 6C4 6.55228 4.44772 7 5 7Z" fill="white"/>
+                <path d="M2.5 4.5C3.16 3.84 4.04 3.5 5 3.5C5.96 3.5 6.84 3.84 7.5 4.5" stroke="white" strokeWidth="1" strokeLinecap="round"/>
+                <path d="M0.5 2.5C1.71 1.3 3.27 0.5 5 0.5C6.73 0.5 8.29 1.3 9.5 2.5" stroke="white" strokeWidth="1" strokeLinecap="round"/>
+              </svg>
+              {/* Battery */}
+              <div className="flex items-center gap-[1px]">
+                <div
+                  className="rounded-[2px]"
+                  style={{ width: '18px', height: '9px', border: '1px solid rgba(255,255,255,0.4)', padding: '1px' }}
+                >
+                  <div className="h-full rounded-[1px] bg-white/80" style={{ width: '80%' }}></div>
+                </div>
+                <div className="rounded-r-[1px] bg-white/35" style={{ width: '2px', height: '4px' }}></div>
+              </div>
             </div>
           </div>
 
@@ -167,8 +187,31 @@ export function PhoneMockup() {
         </div>
       </div>
 
-      {/* Dynamic island */}
-      <div className="absolute top-[12px] left-1/2 -translate-x-1/2 w-[80px] h-[22px] rounded-full bg-black z-10"></div>
+      {/* Dynamic Island */}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 z-30 flex items-center justify-end"
+        style={{
+          top: '10px',
+          width: '90px',
+          height: '26px',
+          background: '#000',
+          borderRadius: '999px',
+          boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.95), inset 0 0 0 0.5px rgba(255,255,255,0.05)',
+        }}
+      >
+        {/* Camera lens dot */}
+        <div
+          style={{
+            width: '7px',
+            height: '7px',
+            borderRadius: '50%',
+            background: '#141414',
+            marginRight: '9px',
+            flexShrink: 0,
+            boxShadow: '0 0 0 1px rgba(255,255,255,0.06), inset 0 0 3px rgba(100,160,255,0.12)',
+          }}
+        />
+      </div>
     </div>
   );
 }
