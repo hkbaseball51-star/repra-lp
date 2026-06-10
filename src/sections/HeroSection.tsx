@@ -5,10 +5,10 @@ import { PhoneMockup } from '../components/PhoneMockup';
 import { APP_STORE_URL } from '../config/appStore';
 
 const floatingCards = [
-  { label: 'Bench Press', value: '前回 90 kg', top: '6%', right: '-12%', delay: '0s' },
-  { label: 'Best 1RM', value: '+12.5 kg', top: '38%', right: '-16%', delay: '1.5s' },
-  { label: 'Total Volume', value: '8,400 kg', bottom: '18%', right: '-12%', delay: '0.8s' },
-  { label: 'Streak', value: '28 Days', bottom: '8%', left: '-10%', delay: '2s' },
+  { label: 'This Month',  value: '19 Sessions',      top: '6%',    right: '-12%', delay: '0s'   },
+  { label: '部位別に記録', value: 'Push・Pull・Legs', top: '38%',   right: '-16%', delay: '1.5s' },
+  { label: '続けた証拠',   value: '28 Days',          bottom: '18%', right: '-12%', delay: '0.8s' },
+  { label: '成長も見える', value: '+12.5 kg',         bottom: '8%',  left: '-10%',  delay: '2s'   },
 ];
 
 export function HeroSection() {
@@ -82,25 +82,24 @@ export function HeroSection() {
 
             {/* Japanese headline — primary */}
             <h1 className="text-4xl md:text-5xl font-bold leading-[1.15] tracking-tight mb-2 text-white">
-              前回の重量を
+              続けた証拠が
               <br />
               <span
                 className="bg-clip-text text-transparent"
                 style={{ backgroundImage: 'linear-gradient(90deg, #F97316, #F59E0B)' }}
               >
-                忘れない。
+                残る。
               </span>
             </h1>
 
             {/* Sub-headline */}
             <p className="text-lg md:text-xl font-semibold text-white/75 mb-5 leading-snug">
-              成長を、数字とストーリーで残す。
+              記録する。見返す。成長に気づく。
             </p>
 
             {/* Description */}
             <p className="text-white/55 text-sm leading-relaxed mb-8 max-w-md">
-              前回の重量を忘れない。<br />
-              記録する。見返す。成長が見える。
+              筋トレの記録をカレンダー・数字・グラフで残し、続けた日々と成長を見返せるアプリです。
             </p>
 
             {/* CTA group */}
@@ -130,7 +129,7 @@ export function HeroSection() {
 
             {/* Microcopy */}
             <p className="text-white/30 text-xs tracking-wide">
-              前回を忘れない。成長を、数字とストーリーで残す。
+              記録する。見返す。続けた証拠が残る。
             </p>
           </div>
 
