@@ -46,11 +46,11 @@ export function Footer() {
               Privacy Policy
             </Link>
             <Link to="/terms" className="text-sm text-white/35 hover:text-white/70 transition-colors duration-200">
-              Terms
+              Terms of Use
             </Link>
-            <a href="mailto:support@repraworkout.com" className="text-sm text-white/35 hover:text-white/70 transition-colors duration-200">
-              Contact
-            </a>
+            <Link to="/support" className="text-sm text-white/35 hover:text-white/70 transition-colors duration-200">
+              Support
+            </Link>
           </div>
         </div>
 

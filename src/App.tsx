@@ -13,6 +13,7 @@ import { WaitlistSection } from './sections/WaitlistSection';
 import { Footer } from './sections/Footer';
 import { PrivacyPage } from './pages/PrivacyPage';
 import { TermsPage } from './pages/TermsPage';
+import { SupportPage } from './pages/SupportPage';
 
 function LandingPage() {
   return (
@@ -49,6 +50,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/privacy" element={<PrivacyPage />} />
       <Route path="/terms" element={<TermsPage />} />
+      <Route path="/support" element={<SupportPage />} />
     </Routes>
   );
 }

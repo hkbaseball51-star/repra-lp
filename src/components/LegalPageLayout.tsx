@@ -189,7 +189,12 @@ export function LegalPageLayout({ ja, en }: LegalPageLayoutProps) {
               <span className="text-xs text-white/25">Every rep becomes proof.</span>
             </div>
             <div className="flex items-center gap-5 flex-wrap justify-center">
-              <a href="#" className="flex items-center gap-1.5 text-sm text-white/30 hover:text-white/65 transition-colors duration-200">
+              <a
+                href="https://www.instagram.com/repra_jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-white/30 hover:text-white/65 transition-colors duration-200"
+              >
                 <Instagram size={13} />
                 Instagram
               </a>
@@ -198,6 +203,9 @@ export function LegalPageLayout({ ja, en }: LegalPageLayoutProps) {
               </Link>
               <Link to="/terms" className="text-sm text-white/30 hover:text-white/65 transition-colors duration-200">
                 Terms
+              </Link>
+              <Link to="/support" className="text-sm text-white/30 hover:text-white/65 transition-colors duration-200">
+                Support
               </Link>
             </div>
           </div>
